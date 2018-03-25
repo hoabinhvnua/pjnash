@@ -1,1 +1,210 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;;
+  line-height: 1.65;
+  letter-spacing: .004em;
+}
+
+.bg-white {
+  display: flex;
+}
+
+.pr-gap-5 {
+  display: block;
+  height: 5rem;
+}
+
+.display-3 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.pr-gap-2 {
+  display: block;
+  height: 2rem;
+}
+
+.pr-gap-1 {
+  display: block;
+  height: 1.25rem;
+}
+
+.pr-gap-10 {
+  height: 10rem;
+}
+
+.font-s-2 {
+  font-size: 2.6rem;
+  font-family:'Playfair Display', serif;
+  color: #171717;
+  font-weight: 700;
+}
+
+.marg-1 {
+  margin-bottom: 1.6rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+  font-family: Playfair Display,serif;
+}
+
+/* Nav */
+
+.nk-header {
+  height: 100px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nk-header-scroll {
+  background-color: #fff;
+  color: #171717;
+  height: 100px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar {
+  padding: 2rem 0;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.nav-scroll {
+  display: none;
+}
+
+.no-scroll {
+  display: block;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      cursor: pointer;
+      color: #bfbfbf;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding-left: 14.6px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.nk-header-scroll {
+  .navbar-light {
+    .navbar-nav {
+      .nav-link{
+        color: #696969;
+        font-weight: 500;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+.navbar-toggler-icon {
+  color: #fff;
+}
+
+/* header */
+
+.bg-cl {
+  background-color: rgba(12, 12, 12, 0.6);
+  opacity: 0.75;
+  width: 84.26rem;
+  height: 43.75rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.bg-image {
+  img {
+    width: 84.26rem;
+    height: 43.75rem;
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.pr-header {
+  position: absolute;
+  z-index: 2;
+  top: 10rem;
+  left: 0;
+  right: 0;
+}
+
+h2.sub-title1 {
+  font-size: .85rem;
+  letter-spacing: .2em;
+  margin-bottom: 1.1rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  color: #fff;
+  font-weight: 700;
+}
+
+h1.sub-title2 {
+  line-height: 1.18;
+  color: #fff;
+  font-size: 3.4rem;
+  font-family: Playfair Display;
+  font-weight: 700;
+}
+
+.nk-btn {
+  display: inline-block;
+  color: #fff;
+  border: 0;
+  padding: 18px 25px;
+  font-size: .96rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .5s;
+  background-color: #252525;
+  width: 200px;
+  margin: 35px 10px 0 0;
+}
+
+// Footer
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+.btn-block{
+  width: 100%;
+}
