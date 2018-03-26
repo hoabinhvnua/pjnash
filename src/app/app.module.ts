@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { SingInComponent } from './sing-in/sing-in.component';
 import { SingUpComponent } from './sing-up/sing-up.component';
 import { MainComponent } from './main/main.component';
-
+import { InputTextTrimDirective } from './core/index';
 @NgModule({
   declarations: [
     AppComponent,
     SingInComponent,
     SingUpComponent,
-    MainComponent
+    MainComponent,
+    InputTextTrimDirective
   ],
   imports: [
     BrowserModule,

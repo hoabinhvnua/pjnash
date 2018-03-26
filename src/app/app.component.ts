@@ -36,6 +36,7 @@ export class AppComponent {
     });
     signIn.afterClosed().subscribe(result => {
       this.dataSignIn = result;
+      console.log(this.dataSignIn);
     });
   }
 

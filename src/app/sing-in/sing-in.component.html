@@ -2,7 +2,7 @@
 <form [formGroup]="singInForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>Username</label>
-    <input type="text" class="form-control" formControlName="Username" aria-describedby="emailHelp" placeholder="Enter Username">
+    <input type="text" class="form-control" formControlName="Username" aria-describedby="emailHelp" placeholder="Enter Username" inputTextTrim>
   </div>
   <div class="col alert alert-danger" role="alert" *ngIf="singInForm.get('Username').hasError('required') && singInForm.get('Username').touched">
     Username is required!
@@ -13,7 +13,7 @@
 
   <div class="form-group">
     <label>Password</label>
-    <input type="password" class="form-control" formControlName="Password" placeholder="Password">
+    <input type="password" class="form-control" formControlName="Password" placeholder="Password" inputTextTrim>
   </div>
   <div class="col alert alert-danger" role="alert" *ngIf="singInForm.get('Password').hasError('required') && singInForm.get('Password').touched">
     Password is required!
