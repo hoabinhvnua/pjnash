@@ -10,16 +10,14 @@ import { SingUpComponent } from './sing-up/sing-up.component';
 })
 export class AppComponent {
   show = true;
-  animal: string;
-  name: string;
+  dataSignUp: any;
+  dataSignIn: any;
   // ===========================================================================
   // TRY THIS
   // ===========================================================================
-  @ViewChild('navbar') navbar: ElementRef;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     if (number < 100) {
       this.show = true;
@@ -29,6 +27,7 @@ export class AppComponent {
   }
   constructor(public dialog: MatDialog) { }
 
+
   openSignIn(): void {
     const signIn = this.dialog.open(SingInComponent, {
       width: '500px',
@@ -36,7 +35,7 @@ export class AppComponent {
       autoFocus: false
     });
     signIn.afterClosed().subscribe(result => {
-      console.log('result', result);
+      this.dataSignIn = result;
     });
   }
 
@@ -46,5 +45,19 @@ export class AppComponent {
       height: '700px',
       autoFocus: false
     });
+    signUp.afterClosed().subscribe(result => {
+      this.dataSignUp = result;
+    });
+  }
+
+  check(dataSignUp, dataSignIn) {
+    if (this.dataSignUp && this.dataSignIn) {
+      if (this.dataSignIn.Username === this.dataSignUp.Username &&
+        this.dataSignIn.Password === this.dataSignUp.Password) {
+        console.log('dang nhap thanh cong!');
+      } else {
+        console.log('dang nhap khong thanh cong!');
+      }
+    }
   }
 }
