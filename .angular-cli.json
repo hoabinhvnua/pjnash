@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+<<<<<<< HEAD
         "../node_modules/bootstrap/scss/bootstrap.scss",
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "assets/icon/pe-icon-7-stroke/scss/pe-icon-7-stroke.scss",
@@ -27,6 +28,14 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/jquery/dist/jquery.slim.min.js"
+=======
+        "../node_modules/font-awesome/scss/font-awesome.scss",
+        "../node_modules/bootstrap/scss/bootstrap.scss",
+        "styles.scss"
+      ],
+      "scripts": [
+
+>>>>>>> 2f2c01295ae1d0edfd16f1e2d808cc0af073361f
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

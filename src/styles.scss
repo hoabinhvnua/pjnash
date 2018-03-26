@@ -60,7 +60,7 @@
 .nk-header {
   height: 100px;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   right: 0;
@@ -129,22 +129,10 @@
 
 /* header */
 
-.bg-cl {
-  background-color: rgba(12, 12, 12, 0.6);
-  opacity: 0.75;
-  width: 84.26rem;
-  height: 43.75rem;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 .bg-image {
   img {
-    width: 84.26rem;
-    height: 43.75rem;
+    width: 100%;
+    height: 49.65rem;
     position: relative;
     z-index: 0;
     top: 0;
@@ -153,6 +141,18 @@
   }
 }
 
+.bg-cl {
+  background-color: rgba(12, 12, 12, 0.6);
+  opacity: 0.75;
+  width: 100%;
+  height: 49.65rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .pr-header {
   position: absolute;
   z-index: 2;
@@ -202,6 +202,14 @@ h1.sub-title2 {
   padding: 20px;
   text-align: center;
   background: #ddd;
+}
+.nk-footer-social ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+.nk-footer-social ul li{
+ margin: 0 1rem;
 }
 
 
