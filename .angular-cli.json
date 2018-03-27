@@ -19,8 +19,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/scss/bootstrap.scss",
-        "../node_modules/font-awesome/scss/font-awesome.scss",
         "assets/icon/pe-icon-7-stroke/scss/pe-icon-7-stroke.scss",
         "styles.scss"
       ],
