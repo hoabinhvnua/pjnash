@@ -8,9 +8,7 @@
         <p class="marg-1">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about
           designing websites and mobile apps. Clever use of technology and lean processes enable us to work faster and smarter.
         </p>
-
         <img src="assets/img/about-me-signature.png" alt="signature" class="nk-img-fit">
-
         <div class="pr-gap-5"></div>
       </div>
     </div>>
@@ -68,7 +66,6 @@
 <div class="portfolio container">
   <div class="pr-gap-5"></div>
   <h2 class="font-s-2 text-center">Best Projects</h2>
-
   <div class="pr-gap-1"></div>
   <div class="container">
     <div class="row">
@@ -181,13 +178,13 @@
 <div class="container">
   <carousel>
     <slide>
-      <img src="assets/img/col-1.jpeg" alt="First slide" style="width:100%;height:28.75rem">
+      <img src="assets/img/portfolio-4-sm.jpg" alt="First slide" style="width:100%;height:28.75rem">
     </slide>
     <slide>
-      <img src="assets/img/col-2.jpeg" alt="Second slide" style="width:100%;height:28.75rem">
+      <img src="assets/img/portfolio-5-sm.jpg" alt="Second slide" style="width:100%;height:28.75rem">
     </slide>
     <slide>
-      <img src="assets/img/col-3.jpeg" alt="Third slide" style="width:100%;height:28.75rem">
+      <img src="assets/img/portfolio-6-sm.jpg" alt="Third slide" style="width:100%;height:28.75rem">
     </slide>
   </carousel>
   <div class="pr-gap-5"></div>
@@ -224,13 +221,13 @@
         <form [formGroup]="formContact" ngSubmit="onSubmit()">
           <div class="row">
             <div class="col-md-6">
-              <input type="text" class="form-control" formControlName="Username" placeholder="Your Name">
+              <input type="text" class="form-control" formControlName="Username" placeholder="Your Name" inputTextTrim>
               <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Username').hasError('required') && formContact.get('Username').touched">
                 Username is required!
               </div>
             </div>
             <div class="col-md-6">
-              <input type="email" class="form-control" formControlName="Email" placeholder="Your Email">
+              <input type="email" class="form-control" formControlName="Email" placeholder="Your Email" inputTextTrim>
               <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Email').hasError('required') &&
               formContact.get('Email').touched"> Email is required!
               </div>
@@ -240,7 +237,7 @@
             </div>
           </div>
           <div class="pr-gap-1"></div>
-          <input type="text" class="form-control" formControlName="Title" placeholder="Your Title">
+          <input type="text" class="form-control" formControlName="Title" placeholder="Your Title" inputTextTrim>
           <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Title').hasError('required') &&
               formContact.get('Title').touched"> Title is required!
           </div>
@@ -249,7 +246,7 @@
           </div>
           <div class="pr-gap-1"></div>
 
-          <textarea class="form-control" formControlName="Comment" rows="8" placeholder="Your Comment"></textarea>
+          <textarea class="form-control" formControlName="Comment" rows="8" placeholder="Your Comment" inputTextTrim></textarea>
           <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Comment').hasError('required') &&
               formContact.get('Comment').touched"> Comment is required!
           </div>

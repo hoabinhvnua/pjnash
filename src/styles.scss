@@ -80,9 +80,11 @@
   padding: 2rem 0;
 }
 
-.navbar-expand-lg .navbar-collapse {
-  justify-content: flex-end;
-  color: #fff;
+.navbar-expand-lg {
+  .navbar-collapse {
+    justify-content: flex-end;
+    color: #fff;
+  }
 }
 
 .nav-scroll {
@@ -210,8 +212,6 @@ h1.sub-title2 {
 .nk-footer-social ul li{
  margin: 0 1rem;
 }
-
-
 .btn-block{
   width: 100%;
 }

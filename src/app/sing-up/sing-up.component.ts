@@ -19,7 +19,12 @@ export function comparePassword(b: AbstractControl) {
     passwordnotmatch: true
   };
 }
-
+// validate space
+export function whiteSpace () {
+  return (c: AbstractControl) => {
+    return ((c.value).trim().match(/ /g)) ? { invalidSpace: true } : null;
+  };
+}
 
 @Component({
   selector: 'app-sing-up',
@@ -41,9 +46,10 @@ export class SingUpComponent implements OnInit {
         Validators.required,
         Validators.minLength(5),
         forbiddenUsername(['admin', 'ADMIN', 'manager', 'MANAGER']),
+        whiteSpace()
       ]),
       pw: this.sgu.group({
-        Password: this.sgu.control('', Validators.required),
+        Password: this.sgu.control('', [Validators.required, Validators.minLength(6), whiteSpace()]),
         confirmPassword: this.sgu.control('', Validators.required)
       },
         {

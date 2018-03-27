@@ -14,8 +14,8 @@ export class MainComponent implements OnInit {
     this.formContact = this.ct.group({
       Username: this.ct.control('', Validators.required),
       Email: this.ct.control('', [Validators.required, Validators.email]),
-      Title: this.ct.control('', [Validators.required, Validators.minLength(20)]),
-      Comment: this.ct.control('', [Validators.required, Validators.minLength(30)])
+      Title: this.ct.control('', [Validators.required, Validators.minLength(10)]),
+      Comment: this.ct.control('', [Validators.required, Validators.minLength(20)])
     });
   }
 

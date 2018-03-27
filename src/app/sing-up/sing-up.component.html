@@ -12,10 +12,13 @@
   </div>
   <div class="form-group">
     <label>Username</label>
-    <input type="text" class="form-control" formControlName="Username" placeholder="Enter Username">
+    <input type="text" class="form-control" formControlName="Username" placeholder="Enter Username" inputTextTrim>
   </div>
   <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.get('Username').hasError('required') && singUpForm.get('Username').touched">
     Username is required!
+  </div>
+  <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.get('Username').hasError('invalidSpace') && singUpForm.get('Username').touched">
+     Username exists whitespace!
   </div>
   <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.get('Username').hasError('minlength') && singUpForm.get('Username').touched">
     Username Minlength is 5!
@@ -27,11 +30,23 @@
   <div formGroupName="pw">
     <div class="form-group">
       <label>Password</label>
-      <input type="password" class="form-control" formControlName="Password" placeholder="Password">
+      <input type="password" class="form-control" formControlName="Password" placeholder="Password" inputTextTrim>
     </div>
+    <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.get('pw.Password').hasError('required') &&
+  singUpForm.get('pw.Password').touched">
+      Password is required!
+    </div>
+    <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.get('pw.Password').hasError('invalidSpace') &&
+  singUpForm.get('pw.Password').touched">
+      Password exists whitespace!
+    </div>
+    <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.get('pw.Password').hasError('minlength') &&
+    singUpForm.get('pw.Password').touched">
+        Password minlength is 6!
+      </div>
     <div class="form-group">
       <label>Confirm Password</label>
-      <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password">
+      <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" inputTextTrim>
     </div>
   </div>
   <div class="col alert alert-danger" role="alert" *ngIf="singUpForm.hasError('passwordnotmatch', ['pw']) &&
