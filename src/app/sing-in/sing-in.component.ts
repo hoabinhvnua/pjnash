@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -22,10 +21,6 @@ export class SingInComponent implements OnInit {
       Password: this.lgi.control('', [Validators.required, Validators.minLength(8)])
     });
   }
-  onNoClick(): void {
-    this.signIn.close();
-  }
-
   onSubmit() {
     this.signIn.close(this.singInForm.value);
   }

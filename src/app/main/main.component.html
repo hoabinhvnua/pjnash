@@ -221,23 +221,43 @@
       </div>
       <div class="col-lg-7">
         <!-- START: Form -->
-        <form>
+        <form [formGroup]="formContact" ngSubmit="onSubmit()">
           <div class="row">
             <div class="col-md-6">
-              <input type="text" class="form-control" name="name" placeholder="Your Name">
+              <input type="text" class="form-control" formControlName="Username" placeholder="Your Name">
+              <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Username').hasError('required') && formContact.get('Username').touched">
+                Username is required!
+              </div>
             </div>
             <div class="col-md-6">
-              <input type="email" class="form-control" name="email" placeholder="Your Email">
+              <input type="email" class="form-control" formControlName="Email" placeholder="Your Email">
+              <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Email').hasError('required') &&
+              formContact.get('Email').touched"> Email is required!
+              </div>
+              <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Email').hasError('email') &&
+              formContact.get('Email').touched && formContact.get('Email').value">Email is not format!
+              </div>
             </div>
           </div>
+          <div class="pr-gap-1"></div>
+          <input type="text" class="form-control" formControlName="Title" placeholder="Your Title">
+          <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Title').hasError('required') &&
+              formContact.get('Title').touched"> Title is required!
+          </div>
+          <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Title').hasError('minlength') &&
+              formContact.get('Title').touched"> Title is minlength 20 char!
+          </div>
+          <div class="pr-gap-1"></div>
 
+          <textarea class="form-control" formControlName="Comment" rows="8" placeholder="Your Comment"></textarea>
+          <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Comment').hasError('required') &&
+              formContact.get('Comment').touched"> Comment is required!
+          </div>
+          <div class="col alert alert-danger" role="alert" *ngIf="formContact.get('Comment').hasError('minlength') &&
+          formContact.get('Comment').touched"> Comment is minlength 30 char!
+          </div>
           <div class="pr-gap-1"></div>
-          <input type="text" class="form-control" name="title" placeholder="Your Title">
-
-          <div class="pr-gap-1"></div>
-          <textarea class="form-control" name="message" rows="8" placeholder="Your Comment"></textarea>
-          <div class="pr-gap-1"></div>
-          <button class="nk-btn">Send Message</button>
+          <button class="nk-btn" type="submit" [disabled]="formContact.invalid">Send Message</button>
         </form>
         <!-- END: Form -->
       </div>
